@@ -26,6 +26,15 @@ namespace PruebaIngreso.Controllers
                 return BadRequest("Comment is null.");
             }
 
+            if (comment.ParentCommentId.HasValue)
+            {
+                var parentComment = _context.Comments.Find(comment.ParentCommentId.Value);
+                if (parentComment == null || parentComment.TaskId != comment.TaskId)
+                {
+                    return BadRequest("El comentario principal no existe o no pertenece a la misma tarea.");
+                }
+            }
+
             _context.Comments.Add(comment);
             _context.SaveChanges();
 
@@ -57,8 +66,18 @@ namespace PruebaIngreso.Controllers
                 return NotFound("Comment not found.");
             }
 
+            if (comment.ParentCommentId.HasValue)
+            {
+                var parentComment = _context.Comments.Find(comment.ParentCommentId.Value);
+                if (parentComment == null || parentComment.TaskId != comment.TaskId)
+                {
+                    return BadRequest("El comentario principal no existe o no pertenece a la misma tarea.");
+                }
+            }
+
             existingComment.CommentText = comment.CommentText;
             existingComment.IsUpdated = true;
+            existingComment.ParentCommentId = comment.ParentCommentId; 
 
             _context.Comments.Update(existingComment);
             _context.SaveChanges();
