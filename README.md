@@ -15,11 +15,17 @@ Funcionamiento de la aplicacion:
 2. En la parte superior derecha de POST /api/auth/login existe un boton, el cual daremos click, con el nombre de 'Authorization' en el cual ingresaremos ese token
    con la palabra reservada 'Bearer' de la siguiente manera Contraseña: Bearer "Aqui ingresa el tokem sin las comillas"
    Ejemeplo:
-   Value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjdmYjEwNmMxLTdhZjctNDQzZi1iNzg1LTQyNzNkMWI3MTk4NSIsImV4cCI6MTcyMTU4NjYwMSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI0Ny8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjQ3LyJ9.yFAoEdP91cOHYMJ9oG50cAxPAN3OSggV34tqFVbKP3I
-3. Ya puedes usar los diferentes endpoints de la funcion, estan datos de ejemplo que se puede ver en el script de la bd para probar los endpoints.
+   
+   Value: 
+   Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjdmYjEwNmMxLTdhZjct
+   NDQzZi1iNzg1LTQyNzNkMWI3MTk4NSIsImV4cCI6MTcyMTU4NjYwMSwiaXNzIjoiaHR0cHM6Ly9sb2Nh
+   bGhvc3Q6NzI0Ny8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjQ3LyJ9.yFAoEdP91cOHYMJ9oG50cAxPAN3OSggV34tqFVbKP3I
+   
+4. Ya puedes usar los diferentes endpoints de la funcion, estan datos de ejemplo que se puede ver en el script de la bd para probar los endpoints.
 
 
-Script de la BD
+Script de la BD:
+
 Create database SagatSalesDb
 go
 
